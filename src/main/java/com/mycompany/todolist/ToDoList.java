@@ -22,13 +22,13 @@ public class ToDoList {
         scanner = new Scanner(System.in);
     }
 
-    // Fungsi untuk menambah to do ke daftar
+    // Fungsi untuk menambah to do ke daftar (Create)
     public void addTask(String task) {
         tasks.add(task);
         System.out.println("Task added: " + task);
     }
 
-    // Fungsi untuk menghapus to do dari daftar
+    // Fungsi untuk menghapus to do dari daftar (Delete)
     public void deleteTask(String task) {
         if (tasks.contains(task)) {
             tasks.remove(task);
@@ -60,14 +60,14 @@ public class ToDoList {
         }
     }
 
-    // Fungsi untuk menampilkan to do dalam daftar berdasarkan index (Read all)
+    // Fungsi untuk menampilkan to do dalam daftar berdasarkan index (Read)
     public String displayTaskByIdx(int idx) {
         idx = idx - 1; // harus dikurangi satu dulu karena index array dimulai dari 0 sedangkan user
                        // dimulai dari 1
         return idx >= tasks.size() || idx < 0 ? "Task is not found" : tasks.get(idx);
     }
 
-    // Fungsi untuk menampilkan to do dalam daftar berdasarkan index (Read all)
+    // Fungsi untuk sunting data (Update)
     public String updateTask(int idx) {
         idx = idx - 1; // harus dikurangi satu dulu karena index array dimulai dari 0 sedangkan user
                        // dimulai dari 1
